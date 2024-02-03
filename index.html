@@ -6,7 +6,7 @@
     <title>Gaming - My hobby 🎮</title>
     <style>
         body {
-            background: #b0ecec;
+            background-image: linear-gradient(to right top, #96dddf, #8ad3ef, #9bc4f6, #bdb1ec, #dd9dcf);
         }
         h1 {
             text-align: center;
@@ -64,7 +64,7 @@
         }
         .container {
             max-width: 600px;
-            background: white;
+            background: rgb(250, 193, 241);
             padding: 20px;
             border-radius: 10px;
             margin: 20px auto;
@@ -80,8 +80,8 @@
         .grid {
             margin: 15px 0;
             display: grid;
-            grid-template-columns: 2fr 2fr 2fr;
-            grid-gap: 5px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 20px;
         }
         .grid img {
             width: 100%;
@@ -90,10 +90,20 @@
         .grid img:hover {
             transform: scale(2);
         }
+        .dark {
+            background-image: linear-gradient(to bottom, #2118c5, #6536d1, #8e55dd, #b276ea, #d197f7);
+            color: white;
+        }
+        .dark .container {
+            background: rgba(241, 2, 2, 0.1);
+        }
+        .dark a {
+            color: plum;
+        }
     </style>
 </head>
 <body>
-    <button class="theme-button">Dark Theme</button>
+    <button class="theme-button">Change Theme</button>
     <div class="container">
     <h1>Gaming</h1>
     <h2>My Favorite Hobby</h2>
@@ -130,7 +140,26 @@
         target="_blank">
         <button>Learn more about gaming!</button></a>
     </div>
-        <footer>Coded with 💜 by <a href="https://github.com/franprincipe/Basics-Add-on-Project" 
-            target="_blank">Francisca Principe</a> </footer>
+    <footer>Coded with 💜 by 
+    <a href="https://github.com/franprincipe/Basics-Add-on-Project" 
+    target="_blank">Francisca Principe
+    </a> 
+    </footer>
+
+
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+            
+            if(body.classList.contains("dark")){
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+          }
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+    </script>
+
 </body>
 </html>
