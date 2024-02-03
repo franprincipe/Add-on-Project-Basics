@@ -15,15 +15,17 @@
             text-align: center;
         }
         p {
-            text-align: center;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-top: 3px;
         }
         a {
             text-decoration: none;
         }
         img {
-            max-width: 80%;
+            max-width: 100%;
             display: block;
-            margin: 10px 50px;
+            margin-bottom: 20px;
         }
         button {
             display: block;
@@ -75,6 +77,15 @@
             filter: contrast(80%);
             transform: scale(1.1);
         }
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            grid-gap: 5px;
+        }
+        .grid img {
+            width: 100%;
+            border-radius: 2px;
+        }
     </style>
 </head>
 <body>
@@ -90,6 +101,7 @@
     class="gaming-intro-picture"
     />
     </a>
+    <div class="grid">
     <img
     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/311/original/360_F_474479082_hUFR2rtFHaH8yEUpxwI74crIRFPVdt2L.jpeg?1706286720" 
     alt=""/>
@@ -98,7 +110,8 @@
     alt="" />
     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/112/314/original/gg2.jpeg?1706286759" 
     alt="">
-    <p>A video game or computer game is an electronic game that 
+    </div>
+    <p> A video game or computer game is an electronic game that 
         involves interaction with a user interface or input device (such as a joystick, 
         controller, keyboard, or motion sensing device) to generate visual feedback from a display 
         device, most commonly shown in a video format on a television set, computer monitor, 
